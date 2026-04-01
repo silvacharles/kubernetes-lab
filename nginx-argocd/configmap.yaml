@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    server {
+        listen 9090;
+        location / {
+            return 200 'Nginx rodando na porta 9090!';
+        }
+    }
